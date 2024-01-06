@@ -1,0 +1,79 @@
+<div class="relative meteorites">
+  <div class="meteor-1"></div>
+  <div class="meteor-2"></div>
+  <div class="meteor-3"></div>
+  <div class="meteor-4"></div>
+  <div class="meteor-5"></div>
+  <div class="meteor-6"></div>
+</div>
+
+<style>
+  .meteorites div {
+    position: absolute;
+    width: 16rem;
+    height: 0.125rem;
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+    --tw-gradient-from: rgb(99 102 241) var(--tw-gradient-from-position);
+    --tw-gradient-to: rgb(99 102 241 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    --tw-rotate: -45deg;
+    transform: translate(0, 0) rotate(-45deg) skew(0) skewY(0) scaleX(1)
+      scaleY(1);
+  }
+  
+  .meteor-1 {
+    top: 32px;
+    left: 28%;
+    animation: meteors 11.2s linear infinite;
+  }
+
+  .meteor-2 {
+    top: 89px;
+    left: 46%;
+    animation: meteors 13.2s linear infinite;
+  }
+
+  .meteor-3 {
+    top: 200px;
+    left: 30%;
+    animation: meteors 12.7s linear infinite;
+  }
+
+  .meteor-4 {
+    top: 38px;
+    left: 98%;
+    animation: meteors 10.4s linear infinite;
+  }
+
+  .meteor-5 {
+    top: 50px;
+    left: 70%;
+    animation: meteors 11.8s linear infinite;
+  }
+
+  .meteor-6 {
+    top: 140px;
+    left: 76%;
+    animation: meteors 12.1s linear infinite;
+  }
+
+  @keyframes meteors {
+    0% {
+      opacity: 1;
+      margin-top: -16rem;
+      margin-right: -16rem;
+    }
+
+    12% {
+      opacity: 0;
+    }
+    15% {
+      opacity: 0;
+      margin-top: 16rem;
+      margin-left: -512px;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+</style>

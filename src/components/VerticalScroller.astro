@@ -1,0 +1,128 @@
+---
+import Typescript from "./icons/Typescript.astro";
+import JavaScript from "./icons/JavaScript.astro";
+import React from "./icons/React.astro";
+import NextJS from "./icons/NextJS.astro";
+import Vue from "./icons/Vue.astro";
+import Express from "./icons/Express.astro";
+import NestJS from "./icons/NestJS.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import Figma from "./icons/Figma.astro";
+import Postgres from "./icons/Postgres.astro";
+---
+
+<div class="max-w-[1050px] mx-auto w-full">
+  <div class="flex flex-nowrap overflow-hidden scroller">
+    <ul class="flex gap-16 w-fit scroller-inner">
+      <li class="flex flex-col justify-center items-center">
+        <Typescript class="h-16 w-16" />
+        <span>TypeScript</span>
+      </li>
+      <li class="flex flex-col justify-center items-center">
+        <JavaScript class="h-16 w-16" />
+        <span class="pt-1">JavaScript</span>
+      </li>
+      <li class="flex flex-col justify-center items-center">
+        <React class="h-16 w-16" />
+        <span>React</span>
+      </li>
+      <li class="flex flex-col justify-center items-center">
+        <NextJS class="h-16 w-16" />
+        <span>NextJs</span>
+      </li>
+      <li class="flex flex-col justify-center items-center">
+        <Vue class="h-16 w-16" />
+        <span>VueJs</span>
+      </li>
+      <li class="flex flex-col justify-center items-center">
+        <Express class="h-16 w-16" />
+        <span>Express</span>
+      </li>
+      <li class="flex flex-col justify-center items-center">
+        <NestJS class="h-16 w-16" />
+        <span>NestJs</span>
+      </li>
+      <li class="flex flex-col justify-center items-center">
+        <Tailwind class="h-16 w-16" />
+        <span>Tailwind</span>
+      </li>
+      <li class="flex flex-col justify-center items-center">
+        <Figma class="h-16 w-16" />
+        <span>Figma</span>
+      </li>
+      <li class="flex flex-col justify-center items-center">
+        <Postgres class="h-16 w-16" />
+        <span>Postgres</span>
+      </li>
+      <li class="flex flex-col justify-center items-center">
+        <Typescript class="h-16 w-16" />
+        <span>TypeScript</span>
+      </li>
+      <li class="flex flex-col justify-center items-center">
+        <JavaScript class="h-16 w-16" />
+        <span class="pt-1">JavaScript</span>
+      </li>
+      <li class="flex flex-col justify-center items-center">
+        <React class="h-16 w-16" />
+        <span>React</span>
+      </li>
+      <li class="flex flex-col justify-center items-center">
+        <NextJS class="h-16 w-16" />
+        <span>NextJs</span>
+      </li>
+      <li class="flex flex-col justify-center items-center">
+        <Vue class="h-16 w-16" />
+        <span>VueJs</span>
+      </li>
+      <li class="flex flex-col justify-center items-center">
+        <Express class="h-16 w-16" />
+        <span>Express</span>
+      </li>
+      <li class="flex flex-col justify-center items-center">
+        <NestJS class="h-16 w-16" />
+        <span>NestJs</span>
+      </li>
+      <li class="flex flex-col justify-center items-center">
+        <Tailwind class="h-16 w-16" />
+        <span>Tailwind</span>
+      </li>
+      <li class="flex flex-col justify-center items-center">
+        <Figma class="h-16 w-16" />
+        <span>Figma</span>
+      </li>
+      <li class="flex flex-col justify-center items-center">
+        <Postgres class="h-16 w-16" />
+        <span>Postgres</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<style>
+  .scroller {
+    -webkit-mask: linear-gradient(
+      to right,
+      transparent 0,
+      black 128px,
+      black calc(100% - 128px),
+      transparent 100%
+    );
+    mask: linear-gradient(
+      to right,
+      transparent 0,
+      black 128px,
+      black calc(100% - 128px),
+      transparent 100%
+    );
+  }
+
+  .scroller-inner {
+    animation: infinite-scroll 20s linear infinite;
+  }
+
+  @keyframes infinite-scroll {
+    to {
+      transform: translate(calc(-50% - 2rem));
+    }
+  }
+</style>

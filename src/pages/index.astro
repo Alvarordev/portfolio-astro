@@ -1,0 +1,119 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import VerticalScroller from "../components/VerticalScroller.astro";
+import Meteorites from "../components/Meteorites.astro";
+import SectionHeader from "../components/SectionHeader.astro";
+import Badges from "../components/Badges.astro";
+---
+
+<Layout title="Portafolio de Alvaro Rodriguez - Desarrollador Full Stack">
+  <main class="px-4 flex-grow overflow-hidden">
+    <Meteorites />
+
+    <SectionContainer
+      id="home"
+      class="py-40 flex flex-col justify-center items-center gap-4 text-center relative z-10"
+    >
+      <div class="flex items-center gap-3">
+        <span class="h-0.5 rounded-sm min-w-32 bg-primary"></span>
+        <h3 class="text-lg">Desarrollador Full Stack</h3>
+        <span class="h-0.5 rounded-sm w-32 bg-primary"></span>
+      </div>
+
+      <h1 class="font-black text-6xl md:text-7xl py-4">ALVARO RODRIGUEZ</h1>
+
+      <button
+        class="border-2 border-indigo-600 rounded-full py-2 px-3 transition-all hover:bg-indigo-600 hover:saturate-150 hover:scale-110"
+      >
+        Descargar CV
+      </button>
+    </SectionContainer>
+
+    <SectionContainer class="py-44 flex flex-col gap-4">
+      <SectionHeader title="Sobre mí" />
+
+      <div class="flex flex-col justify-center items-center sm:flex-row pb-20 px-6 gap-10">
+        <img
+          src="/photo.jpg"
+          alt="foto"
+          class="h-52 w-52 sm:min-w-52 object-cover object-center rounded-lg"
+        />
+
+        <div>
+          <p class="text-md font-normal pt-5">
+            ¡Hola! 👋 Me llamo Alvaro, soy desarrollador FullStack con más de 1
+            año de experiencia, centrándome principalmente en el desarrollo
+            frontend, con un enfoque especifico en Typescript y conocimientos
+            sólidos en Redux y React. Mi enfoque se traduce en la creación de
+            plataformas web modernas e intuitivas , donde la fusión entre la
+            estética y la funcionalidad son mi clave para lograr resultados
+            excepcionales.
+          </p>
+
+          <p class="pt-8">
+            Aquí algunas de las tecnologías que forman parte de mi stack actual:
+          </p>
+        </div>
+      </div>
+
+      <VerticalScroller />
+    </SectionContainer>
+
+    <SectionContainer>
+      <SectionHeader title="Proyectos destacados" />
+
+      <div class="flex w-full pb-20">
+        <img
+          src="/cliniconnect-mockup.png"
+          alt="cliniconnect"
+          class="h-96 rounded-lg object-cover"
+        />
+
+        <div class="flex flex-col w-full items-end">
+          <span class="text-accent text-sm saturate-150 font-medium pb-1"
+            >Software de citas medicas</span
+          >
+          <h3 class="text-4xl font-bold">Cliniconnect</h3>
+          <p
+            class="text-end text-sm -ml-3 bg-secondary p-5 rounded-lg my-6 px-5"
+          >
+            Cliniconnect es una aplicación web que te permite reservar citas
+            médicas, además de mandarte recordatorios mediante tu correo. Este
+            proyecto lo realice de manera colaborativa en NoCountry, me
+            desenvolvi como desarrollador full stack, programando la
+            logica del frontend asi como la del backend.
+          </p>
+
+          <Badges list={['JavaScript', 'React', 'NextJS', 'Express', 'MySql', ]}/>
+        </div>
+      </div>
+
+      <div class="flex w-full">
+        <div class="flex flex-col w-full items-start">
+          <span class="text-accent text-sm saturate-150 font-medium pb-1"
+            >Web para negocio de detailing</span
+          >
+          <h3 class="text-4xl font-bold">DetailCenter</h3>
+          <p
+            class="relative z-10 text-sm -mr-3 bg-secondary p-5 rounded-lg my-6 px-5"
+          >
+            Detailcenter es una aplicación web que te permite reservar citas
+            médicas, además de mandarte recordatorios mediante tu correo. Este
+            proyecto lo realice de manera colaborativa en NoCountry, me
+            desenvolvi como desarrollador full stack, programando la
+            logica del frontend asi como la del backend.
+          </p>
+
+          <Badges list={['TypeScript', 'React', 'NextJS', 'Tailwindcss', 'Vercel' ]}/>
+        </div>
+
+        <img
+          src="/detailcenter.png"
+          alt="cliniconnect"
+          class="h-96 rounded-lg object-cover"
+        />
+      </div>
+    </SectionContainer>
+  </main>
+</Layout>

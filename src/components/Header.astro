@@ -1,48 +1,38 @@
 ---
 import { ModeToggle } from "./ModeToggle";
-import Github from "./icons/Github.astro";
-import Linkedin from "./icons/Linkedin.astro";
 ---
 
 <header
   class={`flex justify-center items-center mx-auto sticky top-0 w-full z-20 max-w-[1050px] py-4 px-4 xl:px-0`}
 >
   <nav
-    class="flex items-center w-full p-5 border-2 border-border rounded-xl backdrop-blur-md"
+    class="flex items-center w-full px-5 py-4 border-2 border-border rounded-xl backdrop-blur-md"
   >
-    <h2 class="flex basis-0 flex-grow font-extrabold">HAZARD</h2>
+    <h2 class="flex basis-0 flex-grow font-extrabold">HAZARDEV</h2>
 
     <ul class="flex gap-6 items-center">
       <li class="hover:text-accent transition-all font-medium">
-        <a href="/">Home</a>
+        <a href="#inicio">Home</a>
+      </li>
+      
+      <li class="hover:text-accent transition-all font-medium">
+        <a href="#sobre-mi">Sobre mí</a>
       </li>
 
       <li class="hover:text-accent transition-all font-medium">
-        <a href="/">Proyectos</a>
+        <a href="#proyectos">Proyectos</a>
       </li>
 
-      <li class="hover:text-accent transition-all font-medium">
-        <a href="/">Sobre mí</a>
-      </li>
     </ul>
 
     <div class="flex flex-grow items-center justify-end basis-0 gap-4">
       <ModeToggle client:load/> 
-
-      <a
-        target="_blank"
-        href={"https://github.com/Alvarordev"}
-        class="hover:text-accent transition-all duration-150"
-      >
-        <Github class="h-6 w-6"/>
-      </a>
-
       <a
         target="_blank"
         href={"https://www.linkedin.com/in/alvaro-rodr%C3%ADguez-6b9969210/"}
-        class="hover:text-accent transition-all duration-150"
+        class="bg-primary dark:bg-accent text-white rounded-full py-2 px-3 hover:text-white hover:scale-105 saturate-150 transition-all duration-150"
       >
-        <Linkedin class="h-6 w-6" />
+        Contacto
       </a>
     </div>
   </nav>

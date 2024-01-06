@@ -5,6 +5,10 @@ import VerticalScroller from "../components/VerticalScroller.astro";
 import Meteorites from "../components/Meteorites.astro";
 import SectionHeader from "../components/SectionHeader.astro";
 import Badges from "../components/Badges.astro";
+import Github from "../components/icons/Github.astro";
+import Linkedin from "../components/icons/Linkedin.astro";
+import ScrollDown from "../components/icons/ScrollDown.astro";
+import Mail from "../components/icons/Mail.astro";
 ---
 
 <Layout title="Portafolio de Alvaro Rodriguez - Desarrollador Full Stack">
@@ -12,7 +16,7 @@ import Badges from "../components/Badges.astro";
     <Meteorites />
 
     <SectionContainer
-      id="home"
+      id="inicio"
       class="py-40 flex flex-col justify-center items-center gap-4 text-center relative z-10"
     >
       <div class="flex items-center gap-3">
@@ -23,18 +27,45 @@ import Badges from "../components/Badges.astro";
 
       <h1 class="font-black text-6xl md:text-7xl py-4">ALVARO RODRIGUEZ</h1>
 
-      <a
-        target="_blank" href="cv.pdf"
-        class="border-2 border-accent rounded-full py-2 px-3 transition-all hover:text-white hover:bg-accent hover:saturate-150 hover:scale-110"
-      >
-        Descargar CV
-      </a>
+      <div class="flex gap-3">
+        <a
+          target="_blank"
+          href="cv.pdf"
+          class="border-2 border-accent rounded-full py-2 px-3 transition-all hover:text-white hover:bg-accent hover:saturate-150 hover:scale-110"
+        >
+          Descargar CV
+        </a>
+
+        <a
+          target="_blank"
+          href="cv.pdf"
+          class="flex gap-2 border-2 border-accent rounded-full py-2 px-3 transition-all hover:text-white hover:bg-accent hover:saturate-150 hover:scale-110"
+        >
+          <Linkedin class="h-6 w-6" />
+          LinkedIn
+        </a>
+
+        <a
+          target="_blank"
+          href="cv.pdf"
+          class="flex gap-2 border-2 border-accent rounded-full py-2 px-3 transition-all hover:text-white hover:bg-accent hover:saturate-150 hover:scale-110"
+        >
+          <Github class="h-6 w-6" />
+          Github
+        </a>
+      </div>
+
+      <div class="pt-32">
+        <ScrollDown class="scroll-down" />
+      </div>
     </SectionContainer>
 
-    <SectionContainer class="py-44 flex flex-col gap-4">
+    <SectionContainer id="sobre-mi" class="pb-36 flex flex-col gap-4">
       <SectionHeader title="Sobre mí" />
 
-      <div class="flex flex-col justify-center items-center sm:flex-row pb-20 px-6 gap-10">
+      <div
+        class="flex flex-col justify-center items-center sm:flex-row pb-20 px-6 gap-10"
+      >
         <img
           src="/photo.jpg"
           alt="foto"
@@ -61,7 +92,7 @@ import Badges from "../components/Badges.astro";
       <VerticalScroller />
     </SectionContainer>
 
-    <SectionContainer>
+    <SectionContainer id="proyectos">
       <SectionHeader title="Proyectos destacados" />
 
       <div class="flex w-full pb-20">
@@ -79,14 +110,16 @@ import Badges from "../components/Badges.astro";
           <p
             class="text-end text-sm -ml-3 bg-secondary p-5 rounded-lg my-6 px-5"
           >
-            Cliniconnect es una aplicación web que te permite reservar citas
-            médicas, además de mandarte recordatorios mediante tu correo. Este
-            proyecto lo realice de manera colaborativa en NoCountry, me
-            desenvolvi como desarrollador full stack, programando la
-            logica del frontend asi como la del backend.
+            CliniConnect es una aplicación web que te permite reservar citas
+            médicas, además de enviarte recordatorios mediante tu correo
+            electrónico. Este proyecto lo realicé de manera colaborativa en
+            NoCountry, donde me desempeñé como desarrollador full stack,
+            programando la lógica tanto del frontend como del backend.
           </p>
 
-          <Badges list={['JavaScript', 'React', 'NextJS', 'Express', 'MySql', ]}/>
+          <Badges
+            list={["JavaScript", "React", "NextJS", "Express", "MySql"]}
+          />
         </div>
       </div>
 
@@ -99,14 +132,17 @@ import Badges from "../components/Badges.astro";
           <p
             class="relative z-10 text-sm -mr-3 bg-secondary p-5 rounded-lg my-6 px-5"
           >
-            Detailcenter es una aplicación web que te permite reservar citas
-            médicas, además de mandarte recordatorios mediante tu correo. Este
-            proyecto lo realice de manera colaborativa en NoCountry, me
-            desenvolvi como desarrollador full stack, programando la
-            logica del frontend asi como la del backend.
+            Desarrollé la página web de DetailCenter, un centro de detailing
+            automotriz. Implementé tecnologías modernas como React con NextJS y
+            utilicé Tailwind CSS para un diseño ágil. Alojado en Vercel,
+            garantizando rendimiento y accesibilidad. Este proyecto destaca mi
+            enfoque en la estética y funcionalidad para proporcionar una
+            experiencia web excepcional.
           </p>
 
-          <Badges list={['TypeScript', 'React', 'NextJS', 'Tailwindcss', 'Vercel' ]}/>
+          <Badges
+            list={["TypeScript", "React", "NextJS", "Tailwindcss", "Vercel"]}
+          />
         </div>
 
         <img
@@ -116,5 +152,43 @@ import Badges from "../components/Badges.astro";
         />
       </div>
     </SectionContainer>
+
+    <SectionContainer
+      class="flex flex-col gap-3 justify-center items-center py-20"
+    >
+      <h3 class="text-4xl font-semibold">¡Pongamonos en Contacto!</h3>
+      <p class="text-sm text-secondary-foreground">
+        Enviame un mensaje y te contestare lo mas pronto posible.
+      </p>
+      <p class="flex pt-5 font-semibold items-center gap-2 text-lg">
+        <Mail />
+        alvarord519@gmail.com
+      </p>
+
+      <a
+        href="https://www.linkedin.com/in/alvaro-rodr%C3%ADguez-6b9969210"
+        class="mt-5 bg-secondary px-7 py-4 flex gap-2 rounded-lg items-center text-sm"
+      >
+        <Linkedin class="h-5 w-5" />
+        Escríbeme
+      </a>
+    </SectionContainer>
   </main>
 </Layout>
+
+<style>
+  .scroll-down {
+    animation: updown 2.5s infinite;
+  }
+
+  @keyframes updown {
+    0%,
+    100% {
+      transform: translateY(-5px);
+    }
+
+    50% {
+      transform: translateY(5px);
+    }
+  }
+</style>

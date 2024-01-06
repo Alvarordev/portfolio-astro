@@ -65,7 +65,7 @@ export function ModeToggle() {
   }, [theme]);
 
   return (
-    <div>
+    <>
       {theme === "theme-light" ? (
         <button
           onClick={() => setThemeState("dark")}
@@ -81,7 +81,7 @@ export function ModeToggle() {
           <Sun />
         </button>
       )}
-    </div>
+    </>
     // <DropdownMenu>
     //   <DropdownMenuTrigger asChild>
     //     <Button variant="outline" size="icon">

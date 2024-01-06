@@ -43,7 +43,9 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="text-primary bg-background flex flex-col min-h-screen overscroll-none">
+  <body
+    class="text-primary bg-background flex flex-col min-h-screen overscroll-none"
+  >
     <Header />
     <slot />
     <Footer />
@@ -106,6 +108,20 @@ const { title } = Astro.props;
     font-family: "Onest Variable", system-ui, sans-serif;
     scroll-behavior: smooth;
     scroll-padding-top: 5.5rem;
+  }
 
+  .pop {
+    animation: pop-in 150ms;
+  }
+
+  @keyframes pop-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.1);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 </style>

@@ -9,6 +9,7 @@ import Github from "../components/icons/Github.astro";
 import Linkedin from "../components/icons/Linkedin.astro";
 import ScrollDown from "../components/icons/ScrollDown.astro";
 import Mail from "../components/icons/Mail.astro";
+import { CopyToClipboard } from "../components/CopyToClipboard";
 ---
 
 <Layout title="Portafolio de Alvaro Rodriguez - Desarrollador Full Stack">
@@ -154,20 +155,19 @@ import Mail from "../components/icons/Mail.astro";
     </SectionContainer>
 
     <SectionContainer
+    id="contacto"
       class="flex flex-col gap-3 justify-center items-center py-20"
     >
-      <h3 class="text-4xl font-semibold">¡Pongamonos en Contacto!</h3>
-      <p class="text-sm text-secondary-foreground">
+      <h3 class="text-4xl font-bold">¡Pongamonos en Contacto!</h3>
+      <p class="text-sm text-primary">
         Enviame un mensaje y te contestare lo mas pronto posible.
       </p>
-      <p class="flex pt-5 font-semibold items-center gap-2 text-lg">
-        <Mail />
-        alvarord519@gmail.com
-      </p>
+
+      <CopyToClipboard client:load/>
 
       <a
         href="https://www.linkedin.com/in/alvaro-rodr%C3%ADguez-6b9969210"
-        class="mt-5 bg-secondary px-7 py-4 flex gap-2 rounded-lg items-center text-sm"
+        class="mt-5 bg-secondary px-7 py-4 flex gap-2 rounded-lg items-center text-sm hover:bg-accent hover:text-white transition-all"
       >
         <Linkedin class="h-5 w-5" />
         Escríbeme

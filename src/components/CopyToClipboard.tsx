@@ -96,7 +96,7 @@ export const CopyToClipboard = () => {
       </button>
 
       {copied && (
-        <div className="absolute -bottom-5 -right-16 text-primary font-medium text-sm pop flex gap-1 items-center">
+        <div className="absolute -bottom-5 -right-14 sm:-right-16 text-primary font-medium text-sm pop flex gap-1 items-center">
           <Check className="h-4 w-4 text-green-600"/>
           Copiado!
         </div>

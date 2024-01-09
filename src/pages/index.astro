@@ -8,8 +8,8 @@ import Badges from "../components/Badges.astro";
 import Github from "../components/icons/Github.astro";
 import Linkedin from "../components/icons/Linkedin.astro";
 import ScrollDown from "../components/icons/ScrollDown.astro";
-import Mail from "../components/icons/Mail.astro";
 import { CopyToClipboard } from "../components/CopyToClipboard";
+import ProjectCard from "../components/ProjectCard.astro";
 ---
 
 <Layout title="Portafolio de Alvaro Rodriguez - Desarrollador Full Stack">
@@ -18,21 +18,24 @@ import { CopyToClipboard } from "../components/CopyToClipboard";
 
     <SectionContainer
       id="inicio"
-      class="py-40 flex flex-col justify-center items-center gap-4 text-center relative z-10"
+      class="flex flex-col justify-center items-center pt-24 sm:py-40 gap-4 text-center relative z-10"
     >
       <div class="flex items-center gap-3">
-        <span class="h-0.5 rounded-sm min-w-32 bg-primary"></span>
-        <h3 class="text-lg">Desarrollador Full Stack</h3>
-        <span class="h-0.5 rounded-sm w-32 bg-primary"></span>
+        <span class="h-0.5 rounded-sm min-w-20 sm:w-32 bg-primary"></span>
+        <h3 class="text-sm sm:text-lg">Desarrollador Full Stack</h3>
+        <span class="h-0.5 rounded-sm min-w-20 sm:w-32 bg-primary"></span>
       </div>
 
-      <h1 class="font-black text-6xl md:text-7xl py-4">ALVARO RODRIGUEZ</h1>
+      <h1 class="font-black text-5xl sm:text-6xl md:text-7xl py-4">
+        ALVARO RODRIGUEZ
+      </h1>
 
-      <div class="flex gap-3">
+      <div class="flex gap-3 flex-wrap justify-center">
         <a
           target="_blank"
           href="cv.pdf"
-          class="border-2 border-accent rounded-full py-2 px-3 transition-all hover:text-white hover:bg-accent hover:saturate-150 hover:scale-110"
+          class="border-2 border-accent rounded-full py-2 px-3 transition-all
+          hover:text-white hover:bg-accent hover:saturate-150 hover:scale-110"
         >
           Descargar CV
         </a>
@@ -40,7 +43,8 @@ import { CopyToClipboard } from "../components/CopyToClipboard";
         <a
           target="_blank"
           href="https://www.linkedin.com/in/alvarorodria"
-          class="flex gap-2 border-2 border-accent rounded-full py-2 px-3 transition-all hover:text-white hover:bg-accent hover:saturate-150 hover:scale-110"
+          class="flex gap-2 border-2 border-accent rounded-full py-2 px-3 transition-all
+          hover:text-white hover:bg-accent hover:saturate-150 hover:scale-110"
         >
           <Linkedin class="h-6 w-6" />
           LinkedIn
@@ -49,14 +53,15 @@ import { CopyToClipboard } from "../components/CopyToClipboard";
         <a
           target="_blank"
           href="https://github.com/Alvarordev"
-          class="flex gap-2 border-2 border-accent rounded-full py-2 px-3 transition-all hover:text-white hover:bg-accent hover:saturate-150 hover:scale-110"
+          class="flex gap-2 border-2 border-accent rounded-full py-2 px-3 transition-all
+          hover:text-white hover:bg-accent hover:saturate-150 hover:scale-110"
         >
           <Github class="h-6 w-6" />
           Github
         </a>
       </div>
 
-      <div class="pt-32">
+      <div class="pt-24 sm:pt-32">
         <ScrollDown class="scroll-down" />
       </div>
     </SectionContainer>
@@ -96,74 +101,47 @@ import { CopyToClipboard } from "../components/CopyToClipboard";
     <SectionContainer id="proyectos">
       <SectionHeader title="Proyectos destacados" />
 
-      <div class="flex w-full pb-20">
-        <img
-          src="/cliniconnect-mockup.webp"
-          alt="cliniconnect"
-          class="h-96 rounded-lg object-cover"
-        />
+      <ProjectCard
+        title="Cliniconnect"
+        subtitle="Software de citas medicas"
+        stack={["JavaScript", "React", "NextJS", "Express", "MySql"]}
+        imgUrl="/cliniconnect-mockup.webp"
+        alt="cliniconnect"
+      >
+        CliniConnect es una aplicación web que te permite reservar citas
+        médicas, además de enviarte recordatorios mediante tu correo
+        electrónico. Este proyecto lo realicé de manera colaborativa en
+        NoCountry, donde me desempeñé como desarrollador full stack, programando
+        la lógica tanto del frontend como del backend.
+      </ProjectCard>
 
-        <div class="flex flex-col w-full items-end">
-          <span class="text-accent text-sm saturate-150 font-medium pb-1"
-            >Software de citas medicas</span
-          >
-          <h3 class="text-4xl font-bold">Cliniconnect</h3>
-          <p
-            class="text-end text-sm -ml-3 bg-secondary p-5 rounded-lg my-6 px-5"
-          >
-            CliniConnect es una aplicación web que te permite reservar citas
-            médicas, además de enviarte recordatorios mediante tu correo
-            electrónico. Este proyecto lo realicé de manera colaborativa en
-            NoCountry, donde me desempeñé como desarrollador full stack,
-            programando la lógica tanto del frontend como del backend.
-          </p>
-
-          <Badges
-            list={["JavaScript", "React", "NextJS", "Express", "MySql"]}
-          />
-        </div>
-      </div>
-
-      <div class="flex w-full">
-        <div class="flex flex-col w-full items-start">
-          <span class="text-accent text-sm saturate-150 font-medium pb-1"
-            >Web para negocio de detailing</span
-          >
-          <h3 class="text-4xl font-bold">DetailCenter</h3>
-          <p
-            class="relative z-10 text-sm -mr-3 bg-secondary p-5 rounded-lg my-6 px-5"
-          >
-            Desarrollé la página web de DetailCenter, un centro de detailing
-            automotriz. Implementé tecnologías modernas como React con NextJS y
-            utilicé Tailwind CSS para un diseño ágil. Alojado en Vercel,
-            garantizando rendimiento y accesibilidad. Este proyecto destaca mi
-            enfoque en la estética y funcionalidad para proporcionar una
-            experiencia web excepcional.
-          </p>
-
-          <Badges
-            list={["TypeScript", "React", "NextJS", "Tailwindcss", "Vercel"]}
-          />
-        </div>
-
-        <img
-          src="/detailcenter.webp"
-          alt="cliniconnect"
-          class="h-96 rounded-lg object-cover"
-        />
-      </div>
+      <ProjectCard
+        title="DetailCenter"
+        subtitle="Web para negocio de detailing"
+        stack={["TypeScript", "React", "NextJS", "Tailwindcss", "Vercel"]}
+        imgUrl="/detailcenter.webp"
+        alt="detailcenter"
+        position="left"
+      >
+        Desarrollé la página web de DetailCenter, un centro de detailing
+        automotriz. Implementé tecnologías modernas como React con NextJS y
+        utilicé Tailwind CSS para un diseño ágil. Alojado en Vercel,
+        garantizando rendimiento y accesibilidad. Este proyecto destaca mi
+        enfoque en la estética y funcionalidad para proporcionar una experiencia
+        web excepcional.
+      </ProjectCard>
     </SectionContainer>
 
     <SectionContainer
-    id="contacto"
-      class="flex flex-col gap-3 justify-center items-center py-20"
+      id="contacto"
+      class="flex flex-col gap-3 justify-center items-center text-center"
     >
       <h3 class="text-4xl font-bold">¡Pongamonos en Contacto!</h3>
       <p class="text-sm text-primary">
         Enviame un mensaje y te contestare lo mas pronto posible.
       </p>
 
-      <CopyToClipboard client:load/>
+      <CopyToClipboard client:load />
 
       <a
         target="_blank"

@@ -6,7 +6,7 @@ interface Props {
 const { list } = Astro.props;
 ---
 
-<ul class="flex gap-2">
+<ul class="flex gap-2 flex-wrap">
   {
     list.map((items) => (
       <li class="dark:text-primary text-primary-foreground rounded-lg bg-accent px-2 py-1 saturate-150 text-sm">

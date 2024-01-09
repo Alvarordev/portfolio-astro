@@ -20,7 +20,7 @@
     transform: translate(0, 0) rotate(-45deg) skew(0) skewY(0) scaleX(1)
       scaleY(1);
   }
-  
+
   .meteor-1 {
     top: 32px;
     left: 28%;
@@ -74,6 +74,46 @@
     }
     100% {
       opacity: 0;
+    }
+  }
+
+  @media (width < 600px) {
+    .meteor-1 {
+      display: none;
+      top: 32px;
+      left: 28%;
+      animation: meteors 11.2s linear infinite;
+    }
+
+    .meteor-2 {
+      top: 89px;
+      left: 30%;
+      animation: meteors 13.2s linear infinite;
+    }
+
+    .meteor-3 {
+      top: 200px;
+      left: 30%;
+      animation: meteors 12.7s linear infinite;
+    }
+
+    .meteor-4 {
+      top: 30px;
+      left: 370px;
+      animation: meteors 10.4s linear infinite;
+    }
+
+    .meteor-5 {
+
+      top: 80px;
+      left: 410px;
+      animation: meteors 11.8s linear infinite;
+    }
+
+    .meteor-6 {
+      top: 160px;
+      left: 480px;
+      animation: meteors 12.1s linear infinite;
     }
   }
 </style>

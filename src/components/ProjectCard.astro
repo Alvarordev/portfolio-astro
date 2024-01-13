@@ -1,5 +1,6 @@
 ---
 import Badges from "./Badges.astro";
+import ExternalLink from "./icons/ExternalLink.astro";
 
 interface Props {
   stack: string[];
@@ -7,18 +8,38 @@ interface Props {
   subtitle: string;
   imgUrl: string;
   alt: string;
+  url: string;
   position?: "right" | "left";
 }
 
-const { stack, title, subtitle, imgUrl, alt, position = "right" } = Astro.props;
+const {
+  stack,
+  title,
+  subtitle,
+  imgUrl,
+  alt,
+  position = "right",
+  url,
+} = Astro.props;
 ---
 
-<div class={`flex flex-col lg:flex-row w-full pb-12 lg:pb-20 ${position === "left" && "lg:flex-row-reverse"}`}>
+<div
+  class={`flex flex-col lg:flex-row w-full pb-12 lg:pb-20 ${
+    position === "left" && "lg:flex-row-reverse"
+  }`}
+>
   <div class="lg:hidden pb-4">
     <span class="text-accent text-sm saturate-150 font-medium pb-1"
       >{subtitle}</span
     >
-    <h3 class="text-4xl font-bold">{title}</h3>
+    <a
+      target="_blank"
+      href={url}
+      class="flex items-center gap-3 text-4xl font-bold hover:text-accent hover:saturate-150 cursor-pointer transition-all"
+    >
+      {title}
+      <ExternalLink />
+    </a>
   </div>
 
   <img
@@ -32,10 +53,20 @@ const { stack, title, subtitle, imgUrl, alt, position = "right" } = Astro.props;
       position === "right" ? "lg:items-end " : "lg:items-start"
     } `}
   >
-    <span class="hidden lg:block text-accent text-sm saturate-150 font-medium pb-1"
+    <span
+      class="hidden lg:block text-accent text-sm saturate-150 font-medium pb-1"
       >{subtitle}</span
     >
-    <h3 class="hidden lg:block text-4xl font-bold">{title}</h3>
+    <a
+      target="_blank"
+      href={url}
+      class={`${
+        position === "right" ? "flex-row-reverse" : "flex-row"
+      } hidden lg:flex items-center gap-3 text-4xl font-bold hover:text-accent hover:saturate-150 cursor-pointer transition-all `}
+    >
+      {title}
+      <ExternalLink />
+    </a>
     <p
       class={`${
         position === "right" ? "lg:text-end lg:-ml-3" : "text-start lg:-mr-3"
